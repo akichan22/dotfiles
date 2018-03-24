@@ -4,19 +4,20 @@ if &compatible
 endif
 
 " Required:
-set runtimepath+=/Users/aki/.config/dein/repos/github.com/Shougo/dein.vim
+set runtimepath+=$HOME/.config/dein/repos/github.com/Shougo/dein.vim
 
 " Required:
-if dein#load_state('/Users/aki/.config/dein')
-  call dein#begin('/Users/aki/.config/dein')
+if dein#load_state('$HOME/.config/dein')
+  call dein#begin('$HOME/.config/dein')
 
   " Let dein manage dein
   " Required:
-  call dein#add('/Users/aki/.config/dein/repos/github.com/Shougo/dein.vim')
+  call dein#add('$HOME/.config/dein/repos/github.com/Shougo/dein.vim')
 
   " Add or remove your plugins here:
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
+  call dein#add('scrooloose/nerdtree')
 
   " You can specify revision/branch/tag.
   call dein#add('Shougo/deol.nvim', { 'rev': 'a1b5108fd' })
@@ -39,3 +40,6 @@ syntax enable
 
 " Enable true color
 set termguicolors
+
+" NERDTree
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
