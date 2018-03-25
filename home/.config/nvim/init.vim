@@ -23,6 +23,7 @@ if dein#load_state('$HOME/.config/dein')
   call dein#add('itchyny/lightline.vim')
   call dein#add('itchyny/vim-gitbranch')
   call dein#add('tpope/vim-fugitive')
+  call dein#add('jistr/vim-nerdtree-tabs')
 
   " You can specify revision/branch/tag.
   call dein#add('Shougo/deol.nvim', { 'rev': 'a1b5108fd' })
@@ -47,7 +48,7 @@ syntax enable
 set termguicolors
 
 " NERDTree
-nnoremap <silent><C-e> :NERDTreeToggle<CR>
+nnoremap <silent><C-e> :NERDTreeTabsToggle<CR>
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 
 " colorscheme
