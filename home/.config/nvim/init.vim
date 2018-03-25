@@ -20,6 +20,9 @@ if dein#load_state('$HOME/.config/dein')
   call dein#add('scrooloose/nerdtree')
   call dein#add('ryanoasis/vim-devicons')
   call dein#add('Haron-Prime/Antares')
+  call dein#add('itchyny/lightline.vim')
+  call dein#add('itchyny/vim-gitbranch')
+  call dein#add('tpope/vim-fugitive')
 
   " You can specify revision/branch/tag.
   call dein#add('Shougo/deol.nvim', { 'rev': 'a1b5108fd' })
@@ -49,3 +52,15 @@ let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 
 " colorscheme
 colorscheme Antares
+
+" lightline
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'fugitive#head'
+      \ },
+      \ }
