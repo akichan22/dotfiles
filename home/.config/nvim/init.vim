@@ -24,6 +24,8 @@ if dein#load_state('$HOME/.config/dein')
   call dein#add('itchyny/vim-gitbranch')
   call dein#add('tpope/vim-fugitive')
   call dein#add('jistr/vim-nerdtree-tabs')
+  call dein#add('kannokanno/previm')
+  call dein#add('tyru/open-browser.vim')
 
   " You can specify revision/branch/tag.
   call dein#add('Shougo/deol.nvim', { 'rev': 'a1b5108fd' })
@@ -68,3 +70,9 @@ let g:lightline = {
 
 " enable mouse
 set mouse=a
+
+" Previm
+augroup PrevimSettings
+    autocmd!
+    autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
+augroup END
