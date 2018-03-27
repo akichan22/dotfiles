@@ -65,3 +65,6 @@ let g:lightline = {
       \   'gitbranch': 'fugitive#head'
       \ },
       \ }
+
+" enable mouse
+set mouse=a
