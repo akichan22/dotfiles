@@ -19,7 +19,7 @@ if dein#load_state('$HOME/.config/dein')
   call dein#add('Shougo/neosnippet-snippets')
   call dein#add('scrooloose/nerdtree')
   call dein#add('ryanoasis/vim-devicons')
-  call dein#add('Haron-Prime/Antares')
+  call dein#add('jacoborus/tender.vim')
   call dein#add('itchyny/lightline.vim')
   call dein#add('itchyny/vim-gitbranch')
   call dein#add('tpope/vim-fugitive')
@@ -54,11 +54,15 @@ nnoremap <silent><C-e> :NERDTreeTabsToggle<CR>
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 
 " colorscheme
-colorscheme Antares
+if (has("termguicolors"))
+ set termguicolors
+endif
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+colorscheme tender
 
 " lightline
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'tender',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
