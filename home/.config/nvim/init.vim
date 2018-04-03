@@ -19,7 +19,7 @@ if dein#load_state('$HOME/.config/dein')
   call dein#add('Shougo/neosnippet-snippets')
   call dein#add('scrooloose/nerdtree')
   call dein#add('ryanoasis/vim-devicons')
-  call dein#add('jacoborus/tender.vim')
+  call dein#add('icymind/NeoSolarized')
   call dein#add('itchyny/lightline.vim')
   call dein#add('itchyny/vim-gitbranch')
   call dein#add('tpope/vim-fugitive')
@@ -56,15 +56,13 @@ nnoremap <silent><C-e> :NERDTreeTabsToggle<CR>
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 
 " colorscheme
-if (has("termguicolors"))
- set termguicolors
-endif
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-colorscheme tender
+set termguicolors
+set background=dark
+colorscheme NeoSolarized
 
 " lightline
 let g:lightline = {
-      \ 'colorscheme': 'tender',
+      \ 'colorscheme': 'wombat',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
