@@ -30,6 +30,8 @@ if dein#load_state('$HOME/.config/dein')
   call dein#add('airblade/vim-gitgutter')
   call dein#add('fatih/vim-go')
   call dein#add('nsf/gocode')
+  call dein#add('Shougo/denite.nvim')
+  call dein#add('Shougo/junkfile.vim')
 
   " You can specify revision/branch/tag.
   call dein#add('Shougo/deol.nvim', { 'rev': 'a1b5108fd' })
