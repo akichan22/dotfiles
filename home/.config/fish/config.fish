@@ -15,3 +15,7 @@ function fish_user_key_bindings
   bind \cr 'peco_select_history (commandline -b)'	# search history
   bind \c] peco_select_ghq_repository			# search git-repo
 end
+
+# PATH
+set PATH $HOME/.gem/ruby/2.3.0/bin/ $PATH
+set PATH $HOME/go/bin/ $PATH
