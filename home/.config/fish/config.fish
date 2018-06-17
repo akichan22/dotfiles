@@ -18,4 +18,4 @@ end
 
 # PATH
 set PATH $HOME/.gem/ruby/2.3.0/bin/ $PATH
-set PATH $HOME/go/bin/ $PATH
+set PATH $HOME/workspace/bin/ $PATH
