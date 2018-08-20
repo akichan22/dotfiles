@@ -17,5 +17,10 @@ function fish_user_key_bindings
 end
 
 # PATH
-set PATH $HOME/.gem/ruby/2.3.0/bin/ $PATH
-set PATH $HOME/workspace/bin/ $PATH
+set -x PATH $HOME/.gem/ruby/2.3.0/bin/ $PATH
+set -x PATH $HOME/workspace/bin/ $PATH
+set -x PATH $HOME/.nodebrew/current/bin $PATH
+# direnv
+eval (direnv hook fish)
+set -x EDITOR vi
+
