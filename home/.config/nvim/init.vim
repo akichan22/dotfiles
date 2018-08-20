@@ -33,6 +33,8 @@ if dein#load_state('$HOME/.config/dein')
   call dein#add('w0rp/ale')
   call dein#add('Shougo/denite.nvim')
   call dein#add('Shougo/junkfile.vim')
+  call dein#add('luochen1990/rainbow')
+  call dein#add('cocopon/iceberg.vim')
 
   " You can specify revision/branch/tag.
   call dein#add('Shougo/deol.nvim', { 'rev': 'a1b5108fd' })
@@ -61,9 +63,8 @@ nnoremap <silent><C-e> :NERDTreeTabsToggle<CR>
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 
 " colorscheme
-set termguicolors
 set background=dark
-colorscheme NeoSolarized
+colorscheme iceberg
 
 " lightline
 let g:lightline = {
@@ -99,3 +100,5 @@ filetype plugin indent on
 augroup filetypedetect
   au BufRead,BufNewFile *.rb setfiletype ruby
 augroup END
+
+let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
