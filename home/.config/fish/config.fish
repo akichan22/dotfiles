@@ -20,7 +20,11 @@ end
 set -x PATH $HOME/.gem/ruby/2.3.0/bin/ $PATH
 set -x PATH $HOME/workspace/bin/ $PATH
 set -x PATH $HOME/.nodebrew/current/bin $PATH
+set PATH $HOME/Library/Python/3.6/bin/ $PATH
+
 # direnv
 eval (direnv hook fish)
 set -x EDITOR vi
 
+# pipenv
+set PIPENV_VENV_IN_PROJECT true

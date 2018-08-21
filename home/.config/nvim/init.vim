@@ -71,12 +71,21 @@ let g:lightline = {
       \ 'colorscheme': 'iceberg',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \             [ 'gitbranch', 'readonly', 'filepath', 'modified' ] ]
       \ },
       \ 'component_function': {
-      \   'gitbranch': 'fugitive#head'
+      \   'gitbranch': 'fugitive#head',
+      \   'filepath': 'FilePath'
       \ },
       \ }
+
+function! FilePath()
+	if winwidth(0) > 90
+		return expand("%:s")
+	else
+		return expand("%:t")
+	endif
+endfunction
 
 " enable mouse
 set mouse=a
@@ -93,6 +102,7 @@ tnoremap <ESC> <C-\><C-n>
 " ale
 let g:ale_linters = {
 \   'ruby': ['rubocop'],
+\   'puppet': ['puppet-lint'],
 \}
 
 " filetype
