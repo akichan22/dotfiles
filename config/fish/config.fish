@@ -1,6 +1,6 @@
 # alias
 alias l 'ls -l'
-balias g git
+alias g git
 
 # direnv
 eval (direnv hook fish)
