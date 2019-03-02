@@ -1,0 +1,16 @@
+[include]
+  path = .gitconfig.local
+
+[ghq]
+  root = ~/workspace/src
+
+[alias]
+  st = status
+  co = checkout
+  br = branch
+
+[core]
+ excludesfile = ~/dotfiles/.gitignore
+
+[user]
+	name = ch1aki
